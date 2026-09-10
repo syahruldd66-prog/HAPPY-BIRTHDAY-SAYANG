@@ -1,139 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#100513">
-<title>For You — A Birthday Story</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/mobile.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff4d91">
+<title>For You — Happy Birthday ♡</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="loader">
-  <div class="loader-orb"></div>
-  <p>mempersiapkan sebuah kejutan...</p>
+<div id="preloader">
+  <div class="pre-heart">♡</div>
+  <div class="pre-title">mempersiapkan sebuah kejutan...</div>
+  <div class="pre-line"><i></i></div>
 </div>
 
-<canvas id="stars"></canvas>
-<div id="aurora"></div>
-<div id="hearts"></div>
-<div id="cursorGlow"></div>
+<canvas id="canvas"></canvas>
+<div class="noise"></div>
+<div class="cursor-glow"></div>
 
-<button class="sound" id="soundBtn" aria-label="Musik">♫</button>
+<header class="nav">
+  <div class="logo">FOR <span>YOU</span> ♡</div>
+  <button id="musicBtn" aria-label="musik">♫</button>
+</header>
 
-<main id="story">
-  <section class="hero scene" data-scene="0">
-    <div class="hero-noise"></div>
-    <div class="hero-content reveal">
-      <span class="eyebrow">a little birthday story</span>
-      <h1><span>Happy</span><em>Birthday</em></h1>
-      <p class="hero-sub">Untuk seseorang yang pantas mendapatkan<br>hari yang seindah dirinya.</p>
-      <button class="magic-btn" id="beginBtn"><span>Mulai kejutan</span><b>✦</b></button>
+<main>
+<section class="hero" id="home">
+  <div class="stars"></div>
+  <div class="hero-orb orb-a"></div><div class="hero-orb orb-b"></div>
+  <div class="hero-content">
+    <div class="pill">A LITTLE SURPRISE FOR YOU ✦</div>
+    <p class="eyebrow">hari ini adalah hari spesial</p>
+    <h1>Happy<br><em>Birthday</em><small>♡</small></h1>
+    <p class="lead">Untuk seseorang yang pantas mendapatkan satu hari penuh dengan senyum, doa, dan hal-hal baik.</p>
+    <button class="btn" id="start">Buka kejutannya <span>→</span></button>
+  </div>
+  <div class="scroll">SCROLL <span>↓</span></div>
+</section>
+
+<section class="wish section">
+  <div class="num">01</div>
+  <div class="split">
+    <div>
+      <p class="eyebrow">a special message</p>
+      <h2>Hari ini,<br><em>semuanya tentang kamu.</em></h2>
     </div>
-    <div class="scroll-hint">SCROLL <i>↓</i></div>
-  </section>
+    <p class="body-copy">Semoga bertambahnya usia membawa lebih banyak cerita indah, langkah yang ringan, hati yang tenang, dan mimpi-mimpi yang perlahan menjadi nyata. Tetap jadi kamu yang luar biasa.</p>
+  </div>
+  <div class="floating-word">HAPPY</div>
+</section>
 
-  <section class="intro scene">
-    <div class="section-inner two-col">
-      <div class="portrait-card reveal" data-parallax="0.12">
-        <div class="portrait-frame"><img src="assets/images/foto2.jpg" alt="Kenangan"></div>
-        <div class="floating-label">a beautiful soul ♡</div>
-      </div>
-      <div class="copy reveal">
-        <span class="eyebrow">today is yours</span>
-        <h2>Satu hari.<br><i>Seribu alasan</i><br>untuk tersenyum.</h2>
-        <p>Hari ini bukan sekadar angka yang bertambah. Ini tentang semua cerita yang sudah dilewati, semua tawa yang pernah hadir, dan semua hal baik yang masih menunggu di depan.</p>
-        <div class="line"></div>
-        <p class="soft">Jadi, pelan-pelan saja. Nikmati hari ini. Karena hari ini dibuat khusus untukmu. 🌷</p>
-      </div>
-    </div>
-  </section>
+<section class="memories section">
+  <div class="section-top">
+    <div><p class="eyebrow">our little memories</p><h2>Moments <em>♡</em></h2></div>
+    <span>02 / 05</span>
+  </div>
+  <div class="gallery">
+    <figure class="card c1"><img src="assets/foto1.jpg"><figcaption>senyum yang selalu aku ingat</figcaption></figure>
+    <figure class="card c2"><img src="assets/foto2.jpg"><figcaption>one of my favorite moments</figcaption></figure>
+    <figure class="card c3"><img src="assets/foto3.jpg"><figcaption>little things, big memories</figcaption></figure>
+    <figure class="card c4"><img src="assets/foto4.jpg"><figcaption>keep this moment forever</figcaption></figure>
+    <figure class="card c5"><img src="assets/foto5.jpg"><figcaption>another beautiful chapter</figcaption></figure>
+    <figure class="card c6"><img src="assets/foto6.jpg"><figcaption>and the story goes on...</figcaption></figure>
+  </div>
+</section>
 
-  <section class="gallery scene" id="memories">
-    <div class="section-inner">
-      <div class="heading reveal">
-        <span class="eyebrow">little memories</span>
-        <h2>Potongan <i>cerita</i></h2>
-        <p>Beberapa momen kecil yang terasa jauh lebih besar ketika dikenang.</p>
+<section class="letter section">
+  <p class="eyebrow">03 / 05 — A LETTER</p>
+  <h2>Open when you're<br><em>ready ♡</em></h2>
+  <div class="envelope-stage">
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div><div class="paper" id="paper">
+        <p class="letter-small">for the birthday girl</p>
+        <h3>Untuk kamu,</h3>
+        <p id="typed"></p>
       </div>
-      <div class="masonry">
-        <figure class="photo p1 reveal"><img src="assets/images/foto1.jpg" alt="Momen 1"><figcaption>one of those days ✦</figcaption></figure>
-        <figure class="photo p2 reveal"><img src="assets/images/foto3.jpg" alt="Momen 2"><figcaption>soft little moments</figcaption></figure>
-        <figure class="photo p3 reveal"><img src="assets/images/foto4.jpg" alt="Momen 3"><figcaption>keep this smile ♡</figcaption></figure>
-        <figure class="photo p4 reveal"><img src="assets/images/foto5.jpg" alt="Momen 4"><figcaption>another memory</figcaption></figure>
-        <figure class="photo p5 reveal"><img src="assets/images/foto6.jpg" alt="Momen 5"><figcaption>forever worth remembering</figcaption></figure>
-      </div>
-      <p class="tap-note">tap foto untuk melihat lebih dekat</p>
+      <div class="flap"></div><div class="env-front"></div><div class="seal">♡</div>
     </div>
-  </section>
+  </div>
+  <button class="btn outline" id="openLetter">Buka suratnya 💌</button>
+</section>
 
-  <section class="letter scene">
-    <div class="section-inner">
-      <div class="heading reveal"><span class="eyebrow">a letter for you</span><h2>Surat kecil <i>untukmu</i></h2></div>
-      <div class="envelope-wrap reveal" id="envelope">
-        <div class="envelope">
-          <div class="env-back"></div>
-          <div class="paper">
-            <div class="paper-inner">
-              <span class="eyebrow">dear you,</span>
-              <h3>Selamat ulang tahun ♡</h3>
-              <p id="letterText"></p>
-              <div class="sign">with all the best wishes,<br><strong>someone who cares</strong></div>
-            </div>
-          </div>
-          <div class="env-left"></div><div class="env-right"></div><div class="env-bottom"></div>
-          <div class="env-flap"></div>
-          <div class="seal">♡</div>
-        </div>
-        <button class="magic-btn small" id="openLetter">Buka surat ✦</button>
-      </div>
-    </div>
-  </section>
+<section class="cake section">
+  <div class="cake-copy">
+    <p class="eyebrow">04 / 05 — MAKE A WISH</p>
+    <h2>Make a<br><em>Wish ✨</em></h2>
+    <p class="body-copy">Sebelum meniup lilin, tutup mata sebentar. Pikirkan satu hal yang paling kamu inginkan.</p>
+    <button class="btn" id="blow">Tiup lilinnya 🎂</button>
+  </div>
+  <div class="cake-scene">
+    <div class="spark s1"></div><div class="spark s2"></div><div class="spark s3"></div>
+    <div class="flame" id="flame"><b></b></div>
+    <div class="candle"></div>
+    <div class="icing"></div><div class="cake-body"><span></span><span></span><span></span></div>
+    <div class="plate"></div>
+    <div class="smoke" id="smoke"></div>
+  </div>
+</section>
 
-  <section class="wish scene">
-    <div class="section-inner wish-inner">
-      <div class="heading reveal">
-        <span class="eyebrow">make a wish</span>
-        <h2>Waktunya <i>berharap.</i></h2>
-        <p>Pejamkan mata sebentar. Pikirkan satu hal yang paling kamu inginkan.</p>
-      </div>
-      <div class="cake-wrap reveal">
-        <div class="glow-ring"></div>
-        <div class="cake">
-          <div class="candle c1"><span class="flame"></span></div>
-          <div class="candle c2"><span class="flame"></span></div>
-          <div class="candle c3"><span class="flame"></span></div>
-          <div class="icing"></div><div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div>
-          <div class="cake-body"></div><div class="plate"></div>
-        </div>
-      </div>
-      <button class="magic-btn" id="blowBtn"><span>Tiup lilin</span><b>🕯</b></button>
-      <p class="wish-result" id="wishResult">make it a beautiful one...</p>
-    </div>
-  </section>
-
-  <section class="final scene">
-    <div class="final-stars"></div>
-    <div class="section-inner final-inner">
-      <div class="reveal">
-        <span class="eyebrow">one last thing</span>
-        <h2>Semoga tahun ini<br><i>lebih indah</i> dari sebelumnya.</h2>
-        <p>Semoga setiap langkah membawamu semakin dekat dengan hal-hal yang kamu impikan. Semoga kamu selalu punya alasan untuk tersenyum, punya keberanian untuk mencoba, dan punya orang-orang baik di sekelilingmu.</p>
-        <div class="big-heart">♥</div>
-        <div class="final-title">Happy Birthday</div>
-        <button class="magic-btn small" id="replay">↻ Putar lagi</button>
-      </div>
-    </div>
-  </section>
+<section class="ending section">
+  <div class="end-ring"></div>
+  <p class="eyebrow">05 / 05 — ONE LAST THING</p>
+  <h2>May your next chapter<br><em>be beautiful.</em></h2>
+  <p class="body-copy">Selamat ulang tahun. Semoga kamu selalu menemukan alasan baru untuk tersenyum, dan semoga semua doa baik menemukan jalannya kepadamu. ♡</p>
+  <button class="btn" id="celebrate">Rayakan! 🎆</button>
+  <div class="signature">with love, always ♡</div>
+</section>
 </main>
 
-<div class="lightbox" id="lightbox"><button id="closeLight">×</button><img id="lightImg" alt=""></div>
-<div class="toast" id="toast"></div>
-
-<script src="js/particles.js"></script>
-<script src="js/main.js"></script>
+<div class="toast" id="toast">♡ wish sent to the universe</div>
+<script src="js/app.js"></script>
 </body>
 </html>
